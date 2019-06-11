@@ -1,0 +1,40 @@
+{
+  "name": "type-collector",
+  "version": "1.0.0",
+  "description": "type-collector is a typescript package that management LocalStorage, Session Storage and Cookies for Typescript, Objects, Array and Primitives types.",
+  "main": "lib/type-collector.js",
+  "types": "lib/type-collector.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shai-benshimol/type-collector.git"
+  },
+  "author": "shai ben shimol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shai-benshimol/type-collector/issues"
+  },
+  "homepage": "https://github.com/shai-benshimol/type-collector#readme",
+  "dependencies": {
+    "typescript": "^3.5.1"
+  },
+  "keywords": [
+    "http",
+    "https",
+    "typescript",
+    "localStorage",
+    "sessions",
+    "sessionStorage",
+    "cookies",
+    "angular",
+    "react",
+    "vuejs"
+  ],
+  "directories": {
+    "lib": "lib"
+  }
+}
