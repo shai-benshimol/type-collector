@@ -9,13 +9,13 @@ export class CookieActivity extends Activity {
         return this;
     }
 
-    public get<T>(key: string): any {
+    public async get<T>(key: string): Promise<T> {
         let coockies = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
         let cookie = coockies ? coockies[2] : null;
         try {
-            return cookie ? JSON.parse(cookie) : null;
+            return await JSON.parse(cookie ? JSON.parse(cookie) : null);
         } catch (error) {
-            return cookie;
+            return await Object(cookie);
         }
     }
     public remove(key: string): Activity {
