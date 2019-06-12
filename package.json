@@ -1,7 +1,7 @@
 {
   "name": "type-collector",
   "version": "1.1.0",
-  "description": "type-collector is a typescript package that management LocalStorage, Session Storage and Cookies for Typescript, Objects, Array and Primitives types.",
+  "description": "type-collector is a fast, simple (and rich), zero-configuration node package that manage effective browser application storage for Typescript. Web Storage can only store strings. This factory module let you handle Object, Array and other types to be stored in and retrieved from them in Local Storage, Session Storage and Cookies.",
   "main": "lib/type-collector.js",
   "types": "lib/type-collector.d.ts",
   "scripts": {
