@@ -9,7 +9,7 @@ export class StorageActivity extends Activity {
         try {
             return await JSON.parse(localStorage.getItem(String(key)));
         } catch (error) {
-            return await localStorage.getItem(typeof key === 'string' ? key : String(key)) as any;
+            return await localStorage.getItem(String(key)) as any;
         }
     }
     public remove(key: string | number): Activity {

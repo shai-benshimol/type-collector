@@ -9,7 +9,7 @@ export class SessionActivity extends Activity{
         try {
             return await JSON.parse(sessionStorage.getItem(String(key)));
         } catch (error) {
-            return await Object(sessionStorage.getItem(String(key)));
+            return await sessionStorage.getItem(String(key)) as any;
         }
     }
     public remove(key: string | number): Activity {

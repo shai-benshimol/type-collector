@@ -8,14 +8,14 @@ export class CookieActivity extends Activity {
         document.cookie = cookie;
         return this;
     }
-
+    
     public async get<T>(key: string | number): Promise<T> {
         let coockies = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
         let cookie = coockies ? coockies[2] : null;
         try {
-            return await JSON.parse(cookie ? JSON.parse(cookie) : null);
+            return await JSON.parse(cookie);
         } catch (error) {
-            return await Object(cookie);
+            return await cookie as any;
         }
     }
     public remove(key: string | number): Activity {

@@ -1,6 +1,6 @@
 {
   "name": "type-collector",
-  "version": "1.0.95",
+  "version": "1.0.99",
   "description": "type-collector is a typescript package that management LocalStorage, Session Storage and Cookies for Typescript, Objects, Array and Primitives types.",
   "main": "lib/type-collector.js",
   "types": "lib/type-collector.d.ts",
