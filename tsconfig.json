@@ -5,7 +5,8 @@
       "module": "commonjs",
       "declaration": true,
       "outDir": "./lib",
-      "strict": true
+      "strict": false,
+      "strictNullChecks":false
     },
     "include": ["src"],
     "exclude": [

@@ -7,7 +7,7 @@ export class SessionActivity extends Activity{
     }    
     public async get<T>(key: string | number): Promise<T> {
         try {
-            return await JSON.parse(sessionStorage.getItem(String(key)) || '{}');
+            return await JSON.parse(sessionStorage.getItem(String(key)));
         } catch (error) {
             return await Object(sessionStorage.getItem(String(key)));
         }

@@ -5,11 +5,11 @@ export class StorageActivity extends Activity {
         localStorage.setItem(String(key), typeof value === 'object' ? JSON.stringify(value) : value);
         return this;
     }
-    public async get<T>(key: string | number): Promise<T> {
+    public async get<T>(key: number | string): Promise<T> {
         try {
-            return await JSON.parse(localStorage.getItem(String(key)) || '{}');
+            return await JSON.parse(localStorage.getItem(String(key)));
         } catch (error) {
-            return await Object(sessionStorage.getItem(String(key)));
+            return await localStorage.getItem(typeof key === 'string' ? key : String(key)) as any;
         }
     }
     public remove(key: string | number): Activity {
